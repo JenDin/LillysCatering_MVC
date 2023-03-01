@@ -13,7 +13,8 @@ body {
 }
 
 /* Login form */
-.form-link {
+.form-link,
+.crud-link {
     color: #3d5a80;
 }
 
