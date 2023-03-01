@@ -5,7 +5,7 @@
     ViewData["Title"] = "Log in";
 }
 
-<h1 class="display-4 text-center mt-3 mb-4">Welcome!</h1>
+<h1 class="display-5 text-center mt-3 mb-4">Welcome!</h1>
 
 <div class="container">
     <div class="row">
@@ -40,7 +40,7 @@
                     <a asp-page="./Register" class="form-link" asp-route-returnUrl="@Model.ReturnUrl">Register new account</a>
                 </p>
 
-                <button type="submit" class="btn login-btn mt-1">
+                <button id="login-submit" type="submit" class="btn login-btn mt-1">
                     Login
                 </button>
             </form>
