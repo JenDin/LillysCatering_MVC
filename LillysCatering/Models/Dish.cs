@@ -7,10 +7,10 @@ namespace LillysCatering.Models
 	{
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "* Please enter a title")]
         public string? Title { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "* Please enter the ingredients")]
         public string? Ingredients { get; set; }
 
         public int MenuId { get; set; }

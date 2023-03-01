@@ -7,14 +7,14 @@ namespace LillysCatering.Models
 	{
         public int Id { get; set; }
 
-        [Required]
-        [Display(Name = "Menu")]
+        [Required(ErrorMessage = "* Please enter a title")]
+        [Display(Name = "Menu name")]
         public string? Title { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "* Please enter a price")]
         public int Price { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "* Please enter a minimum guest amount")]
         [Display(Name = "Minimum guest amount")]
         public int MinGuestAmount { get; set; }
     }
