@@ -4,39 +4,75 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+@*<h1>Edit</h1>
 
-<h4>Menu</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MinGuestAmount" class="control-label"></label>
-                <input asp-for="MinGuestAmount" class="form-control" />
-                <span asp-validation-for="MinGuestAmount" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+    <h4>Menu</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MinGuestAmount" class="control-label"></label>
+                    <input asp-for="MinGuestAmount" class="form-control" />
+                    <span asp-validation-for="MinGuestAmount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>*@
+
+<h1 class="display-5 text-center mt-3 mb-4">Edit menu</h1>
+
+<div class="container">
+    <div class="row">
+        <section class="mx-auto col-10 col-md-8 col-lg-4 border border-dark p-4">
+            <!-- Form -->
+            <form id="account" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Title" class="form-label mb-0">Title</label>
+                    <input asp-for="Title" class="form-control border-dark" aria-required="true" />
+                    <span asp-validation-for="Title" class="text-danger fs-small"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Price" class="form-label mb-0">Price</label>
+                    <input asp-for="Price" class="form-control border-dark " aria-required="true" />
+                    <span asp-validation-for="Price" class="text-danger fs-small"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="MinGuestAmount" class="form-label mb-0">Minimum guest amount</label>
+                    <input asp-for="MinGuestAmount" class="form-control border-dark" aria-required="true" />
+                    <span asp-validation-for="MinGuestAmount" class="text-danger fs-small"></span>
+                </div>
+
+                <button type="submit" value="Save" class="btn form-btn mt-1">
+                    Create
+                </button>
+            </form>
+
+        </section>
+    </div>
 </div>
 
 @section Scripts {
