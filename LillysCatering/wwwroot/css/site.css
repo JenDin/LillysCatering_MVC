@@ -6,18 +6,24 @@ html {
 
 body {
   margin-bottom: 60px;
+  background: #eee;
 }
 
-.fs-small {
+.fs--small {
     font-size: .8rem;
 }
 
 /* Login form */
-.form-link,
-.crud-link {
+.form--link,
+.crud--link {
     color: #3d5a80;
 }
 
-.form-btn {
+.form--btn {
     background: #8ecae6;
+}
+
+.details--title {
+    font-size: 1.1rem;
+    font-weight: 600;
 }
