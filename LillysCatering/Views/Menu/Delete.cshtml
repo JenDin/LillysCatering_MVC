@@ -4,7 +4,7 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
+@*<h1>Delete</h1>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
@@ -36,4 +36,35 @@
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>
+</div>*@
+
+<h1 class="display-5 text-center mt-3 mb-4">Delete menu</h1>
+
+<div class="container">
+    <div class="row mx-auto col-md-6 col-lg-4 p-1">
+        <div>
+            <h2 class="details--title mb-1">@Html.DisplayNameFor(model => model.Title)</h2>
+            <p>@Html.DisplayFor(model => model.Title)</p>
+        </div>
+        <hr class="divider mb-2" />
+        <div>
+            <h2 class="details--title mb-1">@Html.DisplayNameFor(model => model.Price)</h2>
+            <p>@Html.DisplayFor(model => model.Price)</p>
+        </div>
+        <hr class="divider mb-2"  />
+        <div>
+            <h2 class="details--title mb-1">@Html.DisplayNameFor(model => model.MinGuestAmount)</h2>
+            <p>@Html.DisplayFor(model => model.MinGuestAmount)</p>
+        </div>
+        <hr class="divider mb-2"  />
+
+        <form asp-action="Delete" class="mt-2">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            <div class="mt-2">
+                <a asp-action="Index" class="crud--link">Back to the menu table</a>
+            </div>
+        </form>
+    </div>
 </div>
+

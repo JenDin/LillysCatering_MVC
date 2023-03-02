@@ -13,6 +13,11 @@ body {
     font-size: .8rem;
 }
 
+.divider {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
 /* Login form */
 .form--link,
 .crud--link {
