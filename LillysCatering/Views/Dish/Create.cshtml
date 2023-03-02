@@ -4,37 +4,39 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1 class="display-5 text-center mt-3 mb-4 fw-bold">Add new menu</h1>
 
-<h4>Dish</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Ingredients" class="control-label"></label>
-                <input asp-for="Ingredients" class="form-control" />
-                <span asp-validation-for="Ingredients" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MenuId" class="control-label"></label>
-                <select asp-for="MenuId" class ="form-control" asp-items="ViewBag.MenuId"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="container">
+    <div class="row">
+        <section class="mx-auto col-10 col-md-8 col-lg-4 border border-dark p-4">
+            <!-- Form -->
+            <form id="account" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Title" class="form-label mb-0">Title</label>
+                    <input asp-for="Title" class="form-control border-dark" aria-required="true" />
+                    <span asp-validation-for="Title" class="text-danger fs--small"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Ingredients" class="form-label mb-0">Ingredients</label>
+                    <input asp-for="Ingredients" class="form-control border-dark" aria-required="true" />
+                    <span asp-validation-for="Ingredients" class="text-danger fs--small"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="MenuId" class="form-label mb-0">Menu</label>
+                    <select asp-for="MenuId" class="form-control border-dark" asp-items="ViewBag.MenuId"></select>
+                </div>
+
+                <button type="submit" value="Create" class="btn form--btn mt-1">
+                    Create
+                </button>
+            </form>
+
+        </section>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
