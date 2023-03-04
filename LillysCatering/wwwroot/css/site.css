@@ -13,6 +13,10 @@ body {
     font-size: .8rem;
 }
 
+.sub--title {
+    font-size: 1.5rem;
+}
+
 .divider {
     max-width: 95%;
     margin: 0 auto;
