@@ -1,3 +1,6 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 @model IEnumerable<LillysCatering.Models.Menu>
 
 @{
@@ -6,9 +9,13 @@
 
 <h1 class="display-5 text-center mt-3 mb-4 fw-bold">Menus</h1>
 
-<p>
-    <a asp-action="Create" class="crud--link">Add new menu</a>
-</p>
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="mb-3">
+        <a asp-action="Create" class="crud--link create p-2">Add new menu</a>
+    </div>
+}
+
 <table class="table border-dark table-responsive">
     <thead class="bg-dark text-light">
         <tr>
@@ -21,27 +28,43 @@
             <th>
                 @Html.DisplayNameFor(model => model.MinGuestAmount)
             </th>
-            <th></th>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <th>Manage</th>
+            }
+            else
+            {
+                <th>Details</th>
+            }
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MinGuestAmount)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id" class="crud--link">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id" class="crud--link">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id" class="crud--link">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MinGuestAmount)
+                </td>
+                <td>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="crud--link">Edit</a>
+                        <span>|</span>
+                    }
+                    <a asp-action="Details" asp-route-id="@item.Id" class="crud--link">Details</a>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <span>|</span>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="crud--link">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -1,3 +1,6 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 @model IEnumerable<LillysCatering.Models.Dish>
 
 @{
@@ -6,9 +9,12 @@
 
 <h1 class="display-5 text-center mt-3 mb-4 fw-bold">Dishes</h1>
 
-<div class="mb-3">
-    <a asp-action="Create" class="crud--link create p-2">Add new dish</a>
-</div>
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="mb-3">
+        <a asp-action="Create" class="crud--link create p-2">Add new dish</a>
+    </div>
+}
 
 <table class="table border-dark table-responsive">
     <thead class="bg-dark text-light">
@@ -22,7 +28,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.Menu)
             </th>
-            <th></th>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <th>Manage</th>
+            }
+            else
+            {
+                <th>Details</th>
+            }
         </tr>
     </thead>
     <tbody>
@@ -39,9 +52,17 @@
                     @Html.DisplayFor(modelItem => item.Menu.Title)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="crud--link">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id" class="crud--link">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="crud--link">Delete</a>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="crud--link">Edit</a>
+                        <span>|</span>
+                    }
+                    <a asp-action="Details" asp-route-id="@item.Id" class="crud--link">Details</a>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <span>|</span>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="crud--link">Delete</a>
+                    }
                 </td>
             </tr>
         }
