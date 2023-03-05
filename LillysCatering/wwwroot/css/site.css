@@ -1,11 +1,17 @@
 ﻿/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     position: relative;
     min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: 5rem;
   background: #eee;
 }
 
@@ -30,7 +36,8 @@ body {
 
 /* Login form */
 .form--link,
-.crud--link {
+.crud--link,
+.breadcrumb--link {
     color: #3d5a80;
     text-decoration: none;
 }

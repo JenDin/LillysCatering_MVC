@@ -7,7 +7,15 @@
     ViewData["Title"] = "Menus";
 }
 
-<h1 class="display-5 text-center mt-3 mb-4 fw-bold">Menus</h1>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-4 mb-0">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a class="breadcrumb--link" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb--link fw-bold" asp-controller="Menu" asp-action="Index" aria-current="page">Menus</a></li>
+    </ol>
+</nav>
+
+
+<h1 class="display-5 text-center mb-4 fw-bold">Menus</h1>
 
 @if (SignInManager.IsSignedIn(User))
 {

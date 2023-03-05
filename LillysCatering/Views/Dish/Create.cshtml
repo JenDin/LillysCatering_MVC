@@ -4,7 +4,16 @@
     ViewData["Title"] = "Create";
 }
 
-<h1 class="display-5 text-center mt-3 mb-4 fw-bold">Add new dish</h1>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-4 mb-0">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a class="breadcrumb--link" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb--link" asp-controller="Dish" asp-action="Index">Dishes</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb--link fw-bold" asp-controller="Dish" asp-action="Create" aria-current="page">Add new dish</a></li>
+    </ol>
+</nav>
+
+
+<h1 class="display-5 text-center mb-4 fw-bold">Add new dish</h1>
 
 <div class="container">
     <div class="row">

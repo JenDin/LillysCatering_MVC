@@ -4,7 +4,16 @@
     ViewData["Title"] = "Details";
 }
 
-<h1 class="display-5 text-center mt-3 mb-4 fw-bold">Menu details</h1>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-4 mb-0">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a class="breadcrumb--link" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb--link" asp-controller="Menu" asp-action="Index">Menus</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb--link fw-bold" asp-controller="Menu" asp-action="Details" aria-current="page">Menu details</a></li>
+    </ol>
+</nav>
+
+
+<h1 class="display-5 text-center mb-4 fw-bold">Menu details</h1>
 
 <div class="container">
     <div class="row mx-auto col-md-6 col-lg-4 p-1">
