@@ -22,10 +22,17 @@ body {
     margin: 0 auto;
 }
 
+.create {
+    background: #8ecae6;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
 /* Login form */
 .form--link,
 .crud--link {
     color: #3d5a80;
+    text-decoration: none;
 }
 
 .form--btn {
