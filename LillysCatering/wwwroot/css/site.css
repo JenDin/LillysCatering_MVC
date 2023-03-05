@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  margin-bottom: 5rem;
-  background: #eee;
+    margin-bottom: 5rem;
+    background: #eee;
 }
 
 .fs--small {
@@ -40,6 +40,12 @@ body {
     color: #3d5a80;
     text-decoration: none;
 }
+
+    .form--link:hover,
+    .crud--link:hover,
+    .breadcrumb--link:hover {
+        color: #83a2cc;
+    }
 
 .form--btn {
     background: #8ecae6;
