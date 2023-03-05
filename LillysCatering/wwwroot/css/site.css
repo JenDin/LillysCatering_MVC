@@ -33,6 +33,11 @@ body {
     font-size: 1rem;
 }
 
+/* Home page */
+.home--container {
+    margin-top: 5rem;
+}
+
 /* Login form */
 .form--link,
 .crud--link,
