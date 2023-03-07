@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using LillysCatering.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LillysCatering.Controllers;
 
@@ -14,6 +15,12 @@ public class HomeController : Controller
     }
 
     public IActionResult Index()
+    {
+        return View();
+    }
+
+    [Authorize]
+    public IActionResult LoggedInPage()
     {
         return View();
     }

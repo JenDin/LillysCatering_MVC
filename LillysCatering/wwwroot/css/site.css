@@ -33,6 +33,27 @@ body {
     font-size: 1rem;
 }
 
+.lineheight {
+    line-height: 1.6;
+}
+
+.img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.bg-policies {
+    background: #e3d5ca;
+}
+
+    .bg-policies ul li {
+        list-style: square;
+    }
+
+.bg-news {
+    background: #b0c4b1;
+}
+
 /* Home page */
 .home--container {
     margin-top: 5rem;
