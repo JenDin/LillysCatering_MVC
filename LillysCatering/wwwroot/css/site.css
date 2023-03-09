@@ -54,6 +54,10 @@ body {
     background: #b0c4b1;
 }
 
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background: #a9d6e5;
+}
+
 /* Home page */
 .home--container {
     margin-top: 5rem;
@@ -62,19 +66,22 @@ body {
 /* Login form */
 .form--link,
 .crud--link,
-.breadcrumb--link {
+.breadcrumb--link,
+.nav-link {
     color: #3d5a80;
     text-decoration: none;
 }
 
     .form--link:hover,
     .crud--link:hover,
-    .breadcrumb--link:hover {
+    .breadcrumb--link:hover,
+    .nav-link:hover {
         color: #83a2cc;
     }
 
 .form--btn {
-    background: #8ecae6;
+    background: #a9d6e5;
+    color: #fff;
 }
 
 .details--title {
