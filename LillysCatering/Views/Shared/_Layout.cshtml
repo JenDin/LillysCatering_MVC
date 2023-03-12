@@ -7,7 +7,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - LillysCatering</title>
+    <title>LillysCatering | @ViewData["Title"]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LillysCatering.styles.css" asp-append-version="true" />
@@ -25,14 +26,14 @@
                         @if (SignInManager.IsSignedIn(User))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-light" aria-current="page" asp-controller="Home" asp-action="LoggedInPage">Home</a>
+                                <a class="nav-link text-light text-uppercase" aria-current="page" asp-controller="Home" asp-action="LoggedInPage">Home</a>
                             </li>
                         }
                         <li class="nav-item">
-                            <a class="nav-link text-light" aria-current="page" asp-controller="Menu" asp-action="Index">Menus</a>
+                            <a class="nav-link text-light text-uppercase" aria-current="page" asp-controller="Menu" asp-action="Index">Menus</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" aria-current="page" asp-controller="Dish" asp-action="Index">Dishes</a>
+                            <a class="nav-link text-light text-uppercase" aria-current="page" asp-controller="Dish" asp-action="Index">Dishes</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
