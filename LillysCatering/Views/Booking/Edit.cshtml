@@ -1,0 +1,102 @@
+@model LillysCatering.Models.Booking
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-4 mb-0">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a class="breadcrumb--link" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb--link" asp-controller="Booking" asp-action="Index">Bookings</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb--link fw-bold" asp-controller="Booking" asp-action="Edit" aria-current="page">Edit booking</a></li>
+    </ol>
+</nav>
+
+<h1 class="display-5 text-center mb-4 fw-bold">Edit booking</h1>
+
+@*<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNo" class="control-label"></label>
+                <input asp-for="PhoneNo" class="form-control" />
+                <span asp-validation-for="PhoneNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order" class="control-label"></label>
+                <input asp-for="Order" class="form-control" />
+                <span asp-validation-for="Order" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>*@
+
+<div class="container">
+    <div class="row">
+        <section class="mx-auto col-10 col-md-8 col-lg-4 border border-dark p-4">
+            <!-- Form -->
+            <form id="account" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Name" class="form-label mb-0">Name</label>
+                    <input asp-for="Name" class="form-control border-dark" aria-required="true" />
+                    <span asp-validation-for="Name" class="text-danger fs-small"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="PhoneNo" class="form-label mb-0">Phone number</label>
+                    <input asp-for="PhoneNo" class="form-control border-dark " aria-required="true" />
+                    <span asp-validation-for="PhoneNo" class="text-danger fs-small"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Order" class="form-label mb-0">Menu(s) & guest amount</label>
+                    <input asp-for="Order" class="form-control border-dark" aria-required="true" />
+                    <span asp-validation-for="Order" class="text-danger fs-small"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Address" class="form-label mb-0">Address</label>
+                    <input asp-for="Address" class="form-control border-dark" aria-required="true" />
+                    <span asp-validation-for="Address" class="text-danger fs-small"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Date" class="form-label mb-0">Delivery date</label>
+                    <input asp-for="Date" class="form-control border-dark" aria-required="true" />
+                    <span asp-validation-for="Date" class="text-danger fs-small"></span>
+                </div>
+
+                <button type="submit" value="Save" class="btn form--btn mt-1">
+                    Update
+                </button>
+            </form>
+
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

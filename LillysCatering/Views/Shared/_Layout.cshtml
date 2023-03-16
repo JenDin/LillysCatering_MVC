@@ -35,6 +35,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-light text-uppercase" aria-current="page" asp-controller="Dish" asp-action="Index">Dishes</a>
                         </li>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light text-uppercase" aria-current="page" asp-controller="Booking" asp-action="Index">Bookings</a>
+                            </li>
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

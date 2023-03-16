@@ -14,5 +14,7 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Menu> Menus { get; set; }
 
     public DbSet<Dish> Dishes { get; set; }
+
+    public DbSet<Booking> Bookings { get; set; }
 }
 

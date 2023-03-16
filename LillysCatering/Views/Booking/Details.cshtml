@@ -1,0 +1,86 @@
+@model LillysCatering.Models.Booking
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-4 mb-0">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a class="breadcrumb--link" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb--link" asp-controller="Booking" asp-action="Index">Bookings</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb--link fw-bold" asp-controller="Booking" asp-action="Details" aria-current="page">Booking details</a></li>
+    </ol>
+</nav>
+
+<h1 class="display-5 text-center mb-4 fw-bold">Booking details </h1>
+
+@*<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PhoneNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
+<div class="container">
+    <div class="row mx-auto col-md-6 col-lg-4 p-1">
+        <div>
+            <h2 class="details--title mb-1">@Html.DisplayNameFor(model => model.Name)</h2>
+            <p>@Html.DisplayFor(model => model.Name)</p>
+        </div>
+        <hr class="divider mb-2" />
+        <div>
+            <h2 class="details--title mb-1">@Html.DisplayNameFor(model => model.PhoneNo)</h2>
+            <p>$@Html.DisplayFor(model => model.PhoneNo)</p>
+        </div>
+        <hr class="divider mb-2" />
+        <div>
+            <h2 class="details--title mb-1">@Html.DisplayNameFor(model => model.Order)</h2>
+            <p>@Html.DisplayFor(model => model.Order)</p>
+        </div>
+        <hr class="divider mb-2" />
+        <div>
+            <h2 class="details--title mb-1">@Html.DisplayNameFor(model => model.Address)</h2>
+            <p>@Html.DisplayFor(model => model.Address)</p>
+        </div>
+        <hr class="divider mb-2" />
+        <div>
+            <h2 class="details--title mb-1">@Html.DisplayNameFor(model => model.Date)</h2>
+            <p>@Html.DisplayFor(model => model.Date)</p>
+        </div>
+        <hr class="divider mb-2" />
+    </div>
+</div>
