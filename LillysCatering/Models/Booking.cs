@@ -13,6 +13,7 @@ namespace LillysCatering.Models
 
         [Display(Name = "PhoneNo")]
         [Required(ErrorMessage = "* Please enter a phone number")]
+        [Phone]
         public string? PhoneNo { get; set; }
 
         [Display(Name = "Order")]
