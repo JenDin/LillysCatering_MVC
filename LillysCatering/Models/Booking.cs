@@ -26,7 +26,7 @@ namespace LillysCatering.Models
 
         [Display(Name = "Date")]
         [Required(ErrorMessage = "* Please enter a delivery date")]
-        public DateOnly Date { get; set; }
+        public DateTime Date { get; set; }
     }
 }
 
