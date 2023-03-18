@@ -20,6 +20,7 @@ public class HomeController : Controller
     }
 
     [Authorize]
+    [Route("/home")]
     public IActionResult LoggedInPage()
     {
         return View();
