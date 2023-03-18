@@ -25,9 +25,9 @@ namespace LillysCatering.Models
         public string? Address { get; set; }
 
         [Display(Name = "Date")]
+        [DataType(DataType.Date)]
         [Required(ErrorMessage = "* Please enter a delivery date")]
         [DateAttribute(ErrorMessage = "This is an invalid date. Try again!")]
         public DateTime Date { get; set; }
     }
 }
-

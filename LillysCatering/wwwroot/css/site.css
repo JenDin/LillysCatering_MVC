@@ -58,6 +58,10 @@ body {
     background: #a9d6e5;
 }
 
+.logo {
+    width: 150px;
+}
+
 /* Home page */
 .home--container {
     margin-top: 5rem;
