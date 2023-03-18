@@ -4,9 +4,10 @@
 @model IEnumerable<LillysCatering.Models.Booking>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Bookings";
 }
 
+<!-- Bread crumb menu -->
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-4 mb-0">
     <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item"><a class="breadcrumb--link" asp-controller="Home" asp-action="Index">Home</a></li>
@@ -16,6 +17,7 @@
 
 <h1 class="display-5 text-center mb-4 fw-bold">Bookings</h1>
 
+<!-- Hide the create link for non authenticated users -->
 @if (SignInManager.IsSignedIn(User))
 {
     <div class="mb-3">
@@ -23,6 +25,7 @@
     </div>
 }
 
+<!-- Table -->
 <div class="table-responsive">
     <table class="table border-dark table-hover">
         <thead class="bg-dark text-light">
