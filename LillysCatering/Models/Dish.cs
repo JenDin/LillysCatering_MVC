@@ -13,6 +13,7 @@ namespace LillysCatering.Models
         [Required(ErrorMessage = "* Please enter the ingredients")]
         public string? Ingredients { get; set; }
 
+        // FK to the menu table
         public int MenuId { get; set; }
 
         [Display(Name = "Menu")]
