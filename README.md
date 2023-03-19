@@ -22,11 +22,11 @@ Orders:
 ```
 | Method        | Endpoint               | 	       Description		       |
 | ------------- |------------------------| --------------------------------------------|
-| GET           | /api/bookingapi        | Get all the booking in the database |
-| GET           | /api/bookingapi/id    | Get a specific booking in the database	      |
-| POST 		| /api/bookingapi        |Create a new booking		       |
-| PUT 		| /api/bookingapi/id    | Update a booking        |
-| DELETE 	| /api/bookingapi/id     | Delete a booking  	       |
+| GET           | /api/bookingapi        | Get all the booking in the database         |
+| GET           | /api/bookingapi/id     | Get a specific booking in the database.     |
+| POST 		| /api/bookingapi        | Create a new booking		               |
+| PUT 		| /api/bookingapi/id     | Update a booking                            |
+| DELETE 	| /api/bookingapi/id     | Delete a booking  	                       |
 ```
 
 The API receives and returns JSON data with the following structure: 
