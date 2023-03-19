@@ -9,18 +9,18 @@ Two API's have been scaffolded through Entity Framework:
 
 Dishes:
 ```
-| Method         | Endpoint             | 	        Description		       |
+| Method        | Endpoint             | 	        Description		       |
 | ------------- |----------------------| --------------------------------------------- |
-| GET           | /api/dishapi     | Get all dishes in the database   |
-| GET           | /api/dishapi/id | Get a specific dish in the database	       |
-| POST 		| /api/dishapi    | Create a new dish	               |
-| PUT 		| /api/dishapi/id| Update a dish            |
-| DELETE 	| /api/dishapi/id| Delete a dish              |
+| GET           | /api/dishapi         | Get all dishes in the database                |
+| GET           | /api/dishapi/id      | Get a specific dish in the database	       |
+| POST 		| /api/dishapi         | Create a new dish	                       |
+| PUT 		| /api/dishapi/id      | Update a dish                                 |
+| DELETE 	| /api/dishapi/id      | Delete a dish                                 |
 ```
 
 Orders:
 ```
-| Method         | Endpoint               | 	       Description		       |
+| Method        | Endpoint               | 	       Description		       |
 | ------------- |------------------------| --------------------------------------------|
 | GET           | /api/bookingapi        | Get all the booking in the database |
 | GET           | /api/bookingapi/id    | Get a specific booking in the database	      |
